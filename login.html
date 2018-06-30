@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIT App</title>
+    
+  <meta name="theme-color" content="#FFF" />
+    
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+  <!--script src="js/bootstrap.min.js"></script-->
+    
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+
+  <!-- Manifest file -->
+    <link rel="manifest" href="/manifest.json">
+    
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="GIT App">
+  <link rel="apple-touch-icon" href="images/git152.png">
+    
+  <meta name="msapplication-TileImage" content="images/git144.png">
+  <meta name="msapplication-TileColor" content="#fff">
+  
+        
+    
+    <style>
+    
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus
+        {
+            outline: none;
+        }
+        
+        
+        
+        .logintext
+        {
+            border:none;
+            width: 60%;
+            padding: 5px;
+            border-bottom:1px solid #0084ff;
+        }
+        
+        .labletext
+        {
+            color: #0084ff;
+            font-size: 16px;
+            font-weight: 200px;
+            margin-bottom: 8px;
+        }
+        
+        .mybutton
+        {
+            padding: 10px;
+            border: none;
+            background-color: #0084ff;
+            color: #fff;
+        }
+        
+    
+    </style>
+    
+    
+        
+    
+    
+</head>
+    
+    
+    
+<body style="background-color: #FFF;">
+
+  <header class="header">
+    <h1 class="header__title" align="center" style="font-size: 38px; color: #0084ff;"><span id="hello">Hello</span></h1>
+ 
+  </header>
+
+  <div class="main" style="background-color: #fff;"> 
+      
+      <div class="row" style="margin-top: 40px; padding: 10px;">
+          
+          <div class="col-xs-12">
+              
+              
+            <form action="login.php" method="post" >
+              
+                    
+                <div class="labletext">First Name</div>
+                
+                <input type="text" name="fname" id="fname" class="logintext" autocomplete="off" required />
+                <br>
+                <br>
+                <br>
+                
+                <div class="labletext">Last Name</div>
+                
+                <input type="text" name="lname" id="lname" class="logintext" autocomplete="off"  />
+                <br>
+                <br>
+                <br>
+                
+                
+                <div class="labletext">USN</div>
+                
+                <input type="text" name="usn" id="usn" class="logintext" autocomplete="off" required />
+                <br>
+                <br>
+                <br>
+                
+                
+                <div class="labletext">Branch</div>
+                
+                <select name="branch" id="branch">
+                
+                    <option value="0"> Select Branch </option>
+                    <option value="ECE">Electronics and Communication Engineering</option>
+                    <option value="CSE">Computer Science and Engineering</option>
+                    <option value="ME">Mechanical Engineering</option>
+                    <option value="ISE">Information Science and Engineering</option>
+                    <option value="EEE">Electrical and Electronics Engineering</option>
+                    <option value="IPE">Industrial and Production Engineering</option>
+                    <option value="CE">Civil Engineering</option>
+                    <option value="AE">Aeronautical Engineering</option>
+                    <option value="MCA">Master of Computer Applications</option>
+                    <option value="MBA">Master of Business Administration</option>
+                    <option value="BARCH">Bachelor of Architecture</option>
+                
+                </select>
+                <br>
+                <br>
+                <br>
+                
+                
+                
+                <div class="labletext">Year of passing</div>
+                
+                <select name="year" id="year">
+                
+                    <option value="0"> Select year </option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    
+                </select>
+                <br>
+                <br>
+                <br>
+            
+                    
+              
+                <div class="labletext">Currently in</div>
+                
+                <select name="semyear" id="semyear">
+                
+                    <option value="0"> Select year </option>
+                    <option value="4">4th year</option>
+                    <option value="3">3rd year</option>
+                    <option value="2">2nd year</option>
+                    <option value="1">1st year</option>
+                    
+                    
+                </select>
+                <br>
+                <br>
+                <br>
+                
+                
+                <div class="labletext">Email</div>
+                
+                <input type="email" name="email" id="email" class="logintext" autocomplete="off" required />
+                <br>
+                <br>
+                <br>
+                
+                
+                <div class="labletext">Phone Number</div>
+                
+                <input type="number" name="phone" id="phone" class="logintext" autocomplete="off" required />
+                <br>
+                <br>
+                <br>
+                
+                
+                
+                
+               <div align="right"><input type="submit" onclick="return saveDetails();" value="Take me in" class="mybutton"  /></div>
+                <br>
+                <br>
+                
+                
+                
+            
+                  
+            </form>
+          
+          </div>
+          
+        
+      </div>
+      
+      
+    </div>
+    
+    
+    
+    <script>
+        
+        
+        function setCookie(cname, cvalue, exdays) 
+        {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            
+            var expires = "expires="+ d.toUTCString();
+            
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        
+        
+    
+        function saveDetails()
+        {
+            //alert("Here");
+            
+            var fname = document.getElementById("fname").value;
+            var branch = document.getElementById("branch").value;
+            var year = document.getElementById("year").value;
+            
+            
+            setCookie("fname",fname,800);
+            setCookie("branch",branch,800);
+            setCookie("year",year,800);
+            
+            var grp = branch+year;
+            
+            setCookie("group",grp,800);
+            
+            setCookie("background","bg",800);
+            
+            setCookie("font","#424242",800);
+            
+            
+            
+            
+            return true;
+        }
+    
+    
+        
+        
+        
+        
+        var emojis = ["Hello","ನಮಸ್ಕಾರ","नमस्कार","হ্যালো","હેલ્લો","வணக்கம்","ਸਤ ਸ੍ਰੀ ਅਕਾਲ","હેલ્લો","こんにちは","नमस्ते"];
+        var sec = 60;
+        var i = 0;
+        var Timer = setInterval(function(){
+        
+        sec--;
+            
+        document.getElementById("hello").textContent = emojis[i];
+        i = i + 1;
+        
+            if(i>9)
+                i=0;
+            
+        },1500);
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+    
+    
+</body>
+</html>

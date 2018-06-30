@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+      
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIT App</title>
+    
+  <meta name="theme-color" content="#FFF" />
+    
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+  <!--script src="js/bootstrap.min.js"></script-->
+    
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+
+  <!-- Manifest file -->
+    <link rel="manifest" href="/manifest.json">
+    
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="GIT Placements">
+  <link rel="apple-touch-icon" href="images/place152.png">
+    
+  <meta name="msapplication-TileImage" content="images/place144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+      
+      
+      
+    <script src="react/react.production.min.js"></script>
+    <script src="react/react-dom.production.min.js"></script>
+    <script src="react/babel.min.js"></script>
+      
+      
+      
+      <style>
+    
+    a:hover
+        {
+            text-decoration: none;
+        }
+        
+        
+        .imageStyle
+        {
+            width: 50px;
+            height: auto;
+        }
+    
+        
+        .headerinline
+        {
+            background-color: #fafafa;
+        }
+        
+        .headertitleinline
+        {
+            color:#424242; 
+            font-size: 26px; 
+            font-weight: 300;
+        }
+        
+        .setting
+        {
+            width: 24px;
+        }
+        
+        
+        .maininline
+        {
+            background-color: #fff;
+            height: 700px;
+        }
+        
+        .rowone
+        {
+            margin-top: 70px;
+        }
+        
+        .rowtwo
+        {
+            margin-top: 60px;
+        }
+        
+    </style>
+      
+      
+      
+      
+      <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "86de1f2d-7f02-4749-b219-21ec8d89f10c",
+      autoRegister: false, /* Set to true to automatically prompt visitors */
+      notifyButton: {
+          enable: true /* Set to false to hide */
+      }
+    }]);
+  </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    
+        
+        function getCookie(cname) 
+        {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            
+            for(var i = 0; i <ca.length; i++) 
+            {
+                var c = ca[i];
+                
+                while (c.charAt(0) == ' ') 
+                {
+                    c = c.substring(1);
+                }
+                
+                if (c.indexOf(name) == 0) 
+                {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            
+            return "";
+        }
+        
+        
+        
+        function setName()
+        {
+                /*if(getCookie("branch") == "")
+                {
+                    alert("Setting Cookie");
+                    window.location.href = "login.html";
+            
+                }*/
+                    
+               var name = "Hello "+getCookie("fname")+"!";
+                
+                document.getElementById("name").innerHTML = " "+name; 
+                
+                return true;
+                
+        }
+        
+    
+    </script>
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </head>
+  <body>
+      
+      <header class="header headerinline" >
+    <h1 class="header__title headertitleinline" align="center"  id="name">Hello </h1><span align="right"><a href="settings.php"><img src="images/settings.png"  class="setting"></a></span>
+    
+      
+  </header>
+      
+      
+    <div id="root"></div>
+    <script type="text/babel">
+
+
+    const element = (
+    
+        <div>
+    
+                
+            
+                
+
+  <div class="main"  id="main"> 
+      
+      <div class="row rowone" id="row1" >
+          
+          <div class="col-xs-4">
+              
+              <div align="center" >
+                  <a href="noticeboard.php">
+                    <img src="images/notice2.png" class="imageStyle" />
+                    <p class="cardMessage">Notice Board</p>
+                  </a>
+              </div>
+          
+          
+          </div>
+          
+          <div class="col-xs-4">
+              
+              <div align="center">
+                  <a href="study.php">
+                    <img src="images/study2.png" class="imageStyle" />
+                    <p class="cardMessage">Study Material</p>
+                  </a>
+              </div>
+          
+          
+          </div>
+          
+          <div class="col-xs-4">
+              
+              <div align="center">
+                  <a href="placement.php">
+                    <img src="images/placement2.png" class="imageStyle" />
+                    <p class="cardMessage">Placements</p>
+                  </a>
+              </div>
+          
+          
+          </div>
+      
+      
+      </div>
+      
+      
+      
+      
+      <div class="row rowtwo" >
+          
+          <div class="col-xs-4">
+              
+              <div align="center" >
+                  
+                  <img src="images/bus2.png" class="imageStyle" />
+                  <p class="cardMessage">Buses</p>
+              </div>
+          
+          
+          </div>
+          
+          <div class="col-xs-4">
+              
+              <div align="center">
+                  <img src="images/grid2.png" class="imageStyle" />
+                  <p class="cardMessage">Smart Lights</p>
+              </div>
+          
+          
+          </div>
+          
+          <div class="col-xs-4">
+              
+              <div align="center">
+                  <img src="images/face2.png" class="imageStyle" />
+                  <p class="cardMessage">Developers</p>
+              </div>
+          
+          
+          </div>
+      
+      
+      </div>
+    
+
+        
+        
+  </div>
+    
+        
+            
+      
+      
+        </div>
+            
+        
+    
+    );
+
+
+      ReactDOM.render(
+        element,
+        document.getElementById('root')
+      );
+
+    </script>
+
+  </body>
+</html>

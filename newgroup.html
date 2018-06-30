@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Placement Cell</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/tpo.css">
+      
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+  <script src="js/bootstrap.min.js"></script>
+      
+    
+    <style>
+    
+        input:focus
+        {
+            outline: none;
+        }
+        
+        .back
+        {
+            width: 65px;
+            padding-right: 20px;
+        }
+        
+    </style>
+    
+    <script>
+    
+        function back()
+        {
+            window.location.href = 'tpoindex.html';
+        }
+        
+    </script>
+    
+    
+</head>
+    
+<body style="background-color: #fff;">
+        
+    
+    <div class="container-fluid">
+            
+        <div class="jumbotron" style="background-color: #0084ff;">
+            <h1 style="color: #FFF; font-weight: 200;"><img src="images/back.png" class="back" onclick="back()" />New Group</h1>
+        </div>
+   
+        <div class="container box" align="left">
+            
+            <br>
+            <br>
+            <div align="center"><img src="images/newgrp2.png"></div>
+            <br>
+            <br>
+            
+            
+            <form action="newgroup.php" method="post" >
+        
+                <label class="tpolable">Enter year</label>
+                    <br>
+                    <br>
+        
+                <input type="number" name="grpname" class="tpotext" autocomplete="off" required />
+                    <br>
+                    
+            
+                <div align="right"> <input type="submit" class="tposubmit" value="Let's Go!" /></div>
+        
+                 <br>
+                 <br>
+                
+            </form>
+            
+        </div>
+   
+    </div>
+    
+    
+</body>
+</html>

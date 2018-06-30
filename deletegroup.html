@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Placement Cell</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/tpo.css">
+      
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+  <script src="js/bootstrap.min.js"></script>
+      
+    
+    <style>
+        select,
+        input:focus
+        {
+            outline: none;
+        }
+        
+        .back
+        {
+            width: 65px;
+            padding-right: 20px;
+        }
+        
+    </style>
+    
+    <script>
+    
+        function back()
+        {
+            window.location.href = 'tpoindex.html';
+        }
+        
+    </script>
+    
+    
+</head>
+    
+<body style="background-color: #fff;">
+        
+    
+    <div class="container-fluid">
+            
+        <div class="jumbotron" style="background-color: #6611CC;">
+            <h1 style="color: #FFF; font-weight: 200;"><img src="images/back.png" class="back" onclick="back()" />Archive Group</h1>
+        </div>
+   
+        <div class="container box" align="left">
+            
+            <br>
+            <br>
+            <div align="center"><img src="images/delete2.png"></div>
+            <br>
+            <br>
+            
+            
+            <form action="deletegroup.php" method="post" >
+        
+                <label class="tpolable" style="color: #6611CC; font-size: 25px;">Enter year</label>
+                    <br>
+                    <br>
+        
+                <input type="number" name="year" class="tpotext" id="year" autocomplete="off" required />
+                    <br>
+                    <br>
+                    <br>
+                
+                
+                <label class="tpolable" style="color: #6611CC; font-size: 24px;">Action</label>
+                    <br>
+                
+                <select name="action" >
+                    <option value="s" id="action">Select action</option>
+                    <option value="1" id="action">Disactivate Group</option>
+                    <option value="0" id="action">Activate Group</option>
+                    <option value="d" id="action">Delete permanently</option>
+                </select>
+                    
+            
+                <div align="right"> <input type="submit" class="tposubmit" style="background-color: #6611CC; width: 100px;" value="Archive" onclick="return archive()" /></div>
+        
+                 <br>
+                 <br>
+                
+            </form>
+            
+        </div>
+   
+    </div>
+    
+    <script>
+    
+        function archive()
+        {
+            
+            var year = document.getElementById('year').value;
+            
+            var val = confirm("Do you really want to perfom this action on "+year+" group?");
+            
+            if(val == 1)
+                return true;
+            
+            else
+                return false;
+        }
+        
+        
+    
+    </script>
+    
+    
+</body>
+</html>
