@@ -1,0 +1,111 @@
+.box
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    width: 400px;
+    background-color: white; 
+    margin-top: 70px;
+}
+
+.tpotext
+{
+    width: 300px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.tpolable
+{
+    font-size: 27px;
+    font-weight: 300;
+    color: #0084ff;
+}
+
+.tposubmit
+{
+    font-size: 18px;
+    padding: 12px;
+    color: #fff;
+    background-color: #0084ff;
+    font-weight: 300;
+    margin-top: 100px;
+    border: #fff;
+}
+
+.boxviewgrps
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    width: 450px;
+    
+    background-color: white; 
+    margin-top: 20px;
+}
+
+.emptybox
+{
+   padding: 20px;
+    width: 450px; 
+}
+
+
+.tposubmitviewgrps
+{
+    font-size: 18px;
+    padding: 12px;
+    color: #fff;
+    background-color: #43BFC7;
+    font-weight: 300;
+    margin-top: 30px;
+    border: #fff;
+}
+
+
+
+.grplist
+{
+    color: #424242;
+    border: #fff;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.listimg
+{
+    width: 50px;
+    height: auto;
+}
+
+
+.msgbox
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    width: 525px;
+    background-color: white; 
+    margin-top: 30px;
+}
+
+.msglable
+{
+    font-size: 21px;
+    font-weight: 300;
+    color: #3cba54;
+}
+
+.msgsubmit
+{
+    font-size: 18px;
+    padding: 8px;
+    color: #fff;
+    width: 100px;
+    background-color: #3cba54;
+    font-weight: 300;
+  
+    border: #fff;
+}
+
+
